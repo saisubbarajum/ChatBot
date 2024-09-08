@@ -1,2 +1,2 @@
 # ChatBot
-chat bot using python and API. 
+Created a simple chat bot using python to generate automated responses to a user's input using chatterbot library.
