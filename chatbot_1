@@ -1,0 +1,20 @@
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+
+bot = ChatBot("py bot")
+training = ChatterBotCorpusTrainer(bot)
+training.train(
+    'chatterbot.corpus.english',
+)
+print("chat bot using python\n")
+print("-----------------------\n")
+
+start = True
+while start:
+    qu_input = input("you:  \n") 
+    if qu_input == "exit":
+        start = False
+        print("\n Thanks. Chat has ended.\n")
+    else:
+        response = bot.get_response(qu_input)
+        print("\n \t bot:  \n", response)
